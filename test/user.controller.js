@@ -13,9 +13,9 @@ describe('User', () => {
 
     it('create a new user', (done) => {
       const user = {
-        username: 'sergkudinov',
-        firstname: 'Sergei',
-        lastname: 'Kudinov'
+        username: 'matc',
+        firstname: 'matia',
+        lastname: 'cilly'
       };
       userController.create(user, (err, result) => {
         expect(err).to.be.equal(null);
@@ -26,8 +26,8 @@ describe('User', () => {
 
     it('passing wrong user parameters', (done) => {
       const user = {
-        firstname: 'Sergei',
-        lastname: 'Kudinov'
+        firstname: 'matia',
+        lastname: 'cilly'
       };
       userController.create(user, (err, result) => {
         expect(err).to.not.be.equal(null);
@@ -38,10 +38,10 @@ describe('User', () => {
 
     it('should prevent creating an existing user', (done) => {
       // First create a user
-      const user = { 
-        username: 'sergkudinov',
-        firstname: 'Sergei',
-        lastname: 'Kudinov'
+      const user = {
+        username: 'matc',
+        firstname: 'matia',
+        lastname: 'cilly'
       };
       userController.create(user, (err, result) => {
         expect(err).to.be.equal(null);
@@ -59,10 +59,10 @@ describe('User', () => {
 
   describe('Get User', () => {
     it('should get a user by username', (done) => {
-      const user = { 
-        username: 'sergkudinov',
-        firstname: 'Sergei',
-        lastname: 'Kudinov'
+      const user = {
+        username: 'matc',
+        firstname: 'matia',
+        lastname: 'cilly'
       };
 
       // First create a user

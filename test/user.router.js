@@ -47,11 +47,10 @@ describe('User REST API', () => {
   describe('GET /user/:username', () => {
 
     it('should retrieve a user by username', function(done) {
-      //this.timeout(15000); 
       const user = {
-        username: 'sergkudinov',
-        firstname: 'Sergei',
-        lastname: 'Kudinov'
+        username: 'matc',
+        firstname: 'matia',
+        lastname: 'cilly'
       };
   
       // First, create a user
