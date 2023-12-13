@@ -74,7 +74,7 @@ describe('User', () => {
         userController.get(user.username, (err, foundUser) => {
           expect(err).to.be.equal(null);
           expect(foundUser).to.not.be.null;
-          expect(foundUser.username).to.equal('sergkudinov');
+          expect(foundUser.username).to.equal('matc');
           done();
         });
       });
