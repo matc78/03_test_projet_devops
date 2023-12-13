@@ -37,11 +37,9 @@ jobs:
     if: github.ref == 'refs/heads/master'
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v1
-      - run: npm cache clean --force
-      - run: npm ci
-      - run: npm run build --if-present
-      - name: Deploy to Surge
-        run: npx surge ./build my-custom-domain.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.10.0
+      - run: npm install -g surge
+      - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}

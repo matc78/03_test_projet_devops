@@ -23,6 +23,14 @@ Go to the root directory of the application (where `package.json` file located) 
 npm install
 ```
 
+also go in a terminal and run :
+
+```
+redis-cli ping
+```
+
+and it should answer pong, if not try to do this `redis-server --daemonize yes`
+
 ## Usage
 
 1. Start a web server
